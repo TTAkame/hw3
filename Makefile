@@ -1,6 +1,6 @@
 CC = g++ -std=c++14
 
-#CFLAGS = -g -I/Users/tt/vcpkg/installed/arm64-osx/include
+# CFLAGS = -g -I/Users/tt/vcpkg/installed/arm64-osx/include
 # LDFLAGS = 	-L/Users/tt/vcpkg/installed/arm64-osx/lib -ljsoncpp
 CFLAGS = -g
 LDFLAGS = -ljsoncpp
