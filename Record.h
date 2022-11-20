@@ -10,17 +10,22 @@
 #include <json/reader.h>
 #include <json/writer.h>
 #include <json/value.h>
+#include <string>
+
+#include "Person.h"
+#include "Thing.h"
+#include "Location.h"
+#include "Time.h"
+
 
 class Record {
     public:
-        /* char pname[20] = "record pn"; */
-        Person pa{""};
-        Person pb{""};
-        Thing ta{""};
-        Thing tb{""};
-        Location lon{""};
-        Time tme{""};
-        /* Json::Value dump2json(); */
+        Person pa;
+        Person pb;
+        Thing ta;
+        Thing tb;
+        Location lon;
+        Time tme;
         Json::Value dump2json();
         void setPerson(Person ps);
         void setPerson(Person p1, Person p2);

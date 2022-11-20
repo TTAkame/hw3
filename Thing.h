@@ -11,12 +11,10 @@
 #include <json/reader.h>
 #include <json/writer.h>
 #include <json/value.h>
+#include <string>
+#include "Parameter.h"
 
-class Thing{
+class Thing : public Parameter {
     public:
-        char name[20];
-        Json::Value dump2json();
-
-
 };
 

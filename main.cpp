@@ -7,6 +7,7 @@
 #include <json/reader.h>
 #include <json/writer.h>
 #include <json/value.h>
+#include <string.h>
 
 #include "Parameter.h"
 #include "Person.h"
@@ -30,8 +31,6 @@ int main(){
     three.name = "10:00";
     Time four;
     four.name = "11:00";
-    /* cout << (one.dump2json()).toStyledString() << endl; */
-    /* cout << (two.dump2json()).toStyledString() << endl; */
     
     Person red;
     red.name="Little Red";
@@ -60,9 +59,7 @@ int main(){
     
     Location hm;
     hm.name = "home";
-
     
-
     //Little Red Ridding Hood wore the Cap
     Record s1;
     s1.setPerson(red);
@@ -95,3 +92,4 @@ int main(){
     cout << (s3.dump2json()).toStyledString() << endl;
     cout << (s4.dump2json()).toStyledString() << endl;
 }
+

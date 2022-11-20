@@ -7,6 +7,8 @@
 #include <json/reader.h>
 #include <json/writer.h>
 #include <json/value.h>
+#include <string.h>
+
 #include "Record.h"
 
 using namespace std;

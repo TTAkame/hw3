@@ -7,13 +7,9 @@
 #include <json/reader.h>
 #include <json/writer.h>
 #include <json/value.h>
+#include <string.h>
+
 #include "Time.h"
 
 using namespace std;
-
-Json::Value Time::dump2json(){
-	Json::Value result{};
-	result["Description"] = name;
-    return result;
-}
 
