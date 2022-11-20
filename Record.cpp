@@ -16,7 +16,7 @@ using namespace std;
 Json::Value Record::dump2json(){
     Json::Value result{};
 
-    if (strlen(pb.name) == 0) {
+    if (pb.name.length() == 0) {
         result["Person"] = pa.dump2json();
       
     }
@@ -25,10 +25,10 @@ Json::Value Record::dump2json(){
         result["Person 2"] = pb.dump2json();
     }
 
-    if (strlen(tb.name) == 0 && strlen(ta.name)!=0) {
+    if (tb.name.length() == 0 && ta.name.length()!=0) {
         result["Thing"] = ta.dump2json();
     }
-    else if (strlen(ta.name)!=0 && strlen(tb.name)!=0){
+    else if (ta.name.length()!=0 && tb.name.length()!=0){
         result["Thing 1"] = ta.dump2json();
         result["Thing 2"] = tb.dump2json();
     }

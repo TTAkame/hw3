@@ -11,7 +11,7 @@
 #include <json/writer.h>
 #include <json/value.h>
 #include <string.h>
-
+#include "Parameter.h"
 class Location : public Parameter {
     public:
 };
