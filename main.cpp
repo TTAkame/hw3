@@ -21,7 +21,7 @@ using namespace std;
 
 int main(){
 
-    ofstream jsonoutput("output.json");
+    ofstream output("output.json");
     
     Time one;
     one.name = "8:00";
@@ -88,12 +88,12 @@ int main(){
     s4.setTime(four);
 
     // dump
-    jsonoutput << (s1.dump2json()).toStyledString();
-    jsonoutput << (s2.dump2json()).toStyledString();
-    jsonoutput << (s3.dump2json()).toStyledString();
-    jsonoutput << (s4.dump2json()).toStyledString();
+    output << (s1.dump2json()).toStyledString();
+    output << (s2.dump2json()).toStyledString();
+    output << (s3.dump2json()).toStyledString();
+    output << (s4.dump2json()).toStyledString();
 
-    jsonoutput.close();
+    output.close();
 
     return 0;
 }
