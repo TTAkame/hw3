@@ -1,4 +1,5 @@
 #include<iostream>
+#include<fstream>
 
 #include <stdio.h>
 #include <iomanip>
@@ -19,8 +20,8 @@
 using namespace std;
 
 int main(){
-  
- 
+
+    ofstream jsonoutput("output.json");
     
     Time one;
     one.name = "8:00";
@@ -87,9 +88,13 @@ int main(){
     s4.setTime(four);
 
     // dump
-    cout << (s1.dump2json()).toStyledString() << endl;
-    cout << (s2.dump2json()).toStyledString() << endl;
-    cout << (s3.dump2json()).toStyledString() << endl;
-    cout << (s4.dump2json()).toStyledString() << endl;
+    jsonoutput << (s1.dump2json()).toStyledString();
+    jsonoutput << (s2.dump2json()).toStyledString();
+    jsonoutput << (s3.dump2json()).toStyledString();
+    jsonoutput << (s4.dump2json()).toStyledString();
+
+    jsonoutput.close();
+
+    return 0;
 }
 
