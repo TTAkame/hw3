@@ -95,6 +95,16 @@ int main(){
 
     output.close();
 
+    ifstream input("output.json");
+
+    Json::Value object;
+
+    input >> object;
+
+    cout << object;
+
+    input.close();   
+
     return 0;
 }
 
