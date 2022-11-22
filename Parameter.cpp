@@ -17,3 +17,8 @@ Json::Value Parameter::dump2json(){
     return result;
 }
 
+bool Parameter::JSON2Object(Json::Value) {
+
+    return true;
+}
+

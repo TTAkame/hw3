@@ -18,5 +18,6 @@ class Parameter{
 	public:
 		string name;
 		virtual Json::Value dump2json();
+		virtual bool JSON2Object(Json::Value);
 };
 

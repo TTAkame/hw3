@@ -34,4 +34,4 @@ run:	main.o Parameter.o Person.o Time.o Thing.o Record.o Location.o
 	g++ -std=c++14 main.o Parameter.o Person.o Time.o Thing.o Record.o Location.o -o run $(LDFLAGS)
 	
 clean:
-	rm -rf *.o run
+	rm -rf *.o run output.json

@@ -21,8 +21,6 @@ using namespace std;
 
 int main(){
 
-    ofstream output("output.json");
-    
     Time one;
     one.name = "8:00";
     
@@ -87,6 +85,8 @@ int main(){
     s4.setLocation(ot);
     s4.setTime(four);
 
+    ofstream output("output.json");
+    
     // dump
     output << (s1.dump2json()).toStyledString();
     output << (s2.dump2json()).toStyledString();
@@ -98,12 +98,28 @@ int main(){
     ifstream input("output.json");
 
     Json::Value object;
+    Json::Reader reader;
 
-    input >> object;
+    reader.parse(input,object);
 
-    cout << object;
+    /* cout << object << endl; */
 
     input.close();   
+
+    Person p1;
+    Person p2;
+    Person p3;
+    Person p4;
+
+    p1.JSON2Object(object["Person"]);
+    p2.JSON2Object(object["Person"]);
+    p3.JSON2Object(object["Person"]);
+    p4.JSON2Object(object["Person"]);
+
+    cout << (p1.dump2json()).toStyledString() << endl;
+    cout << (p2.dump2json()).toStyledString() << endl;
+    cout << (p3.dump2json()).toStyledString() << endl;
+    cout << (p4.dump2json()).toStyledString() << endl;
 
     return 0;
 }
