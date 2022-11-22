@@ -86,6 +86,20 @@ int main(){
     s4.setTime(four);
 
     ofstream output("output.json");
+
+    Json::Value arr;
+    arr[0]=s1.dump2json();
+    arr[1]=s2.dump2json();
+    arr[2]=s3.dump2json();
+    arr[3]=s4.dump2json();
+
+
+        output << arr.toStyledString();
+
+        output.close();
+
+    
+    /*
     
     // dump
     output << (s1.dump2json()).toStyledString();
@@ -121,6 +135,9 @@ int main(){
     cout << (p3.dump2json()).toStyledString() << endl;
     cout << (p4.dump2json()).toStyledString() << endl;
 
+    
+    */
+    
     return 0;
 }
 
